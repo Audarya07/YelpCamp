@@ -42,7 +42,7 @@ router.post("/login",passport.authenticate('local',
 //logout route
 router.get("/logout", function(req, res){
 	req.logout();
-	req.flash("success", "You need to be logged in to do that!!");
+	req.flash("success", "Successfully logged out!!");
 	res.redirect("/campgrounds");
 });
 
