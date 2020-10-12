@@ -17,13 +17,25 @@ var commentRoutes = require("./routes/comments"),
 	indexRoutes = require("./routes/index");
 
 //mongoose connection
-mongoose.connect('mongodb://localhost:27017/yelp_camp', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
+mongoose.connect("mongodb+srv://audarya:Shamala@2020@cluster0.0k4ic.mongodb.net/yelp_camp?retryWrites=true&w=majority",{
+	useNewUrlParser: true,
+	useCreateIndex: true,
+  	useUnifiedTopology: true,
+  	useFindAndModify: false
 })
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
+
+
+
+
+// mongoose.connect('mongodb://localhost:27017/yelp_camp', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false
+// })
+// .then(() => console.log('Connected to DB!'))
+// .catch(error => console.log(error.message));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
