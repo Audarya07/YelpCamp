@@ -19,8 +19,8 @@ var commentRoutes = require("./routes/comments"),
 
 //mongoose connection for local machine (goorm ide)
 
-//var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
-mongoose.connect("mongodb+srv://audarya:Shamala@2020@cluster0.0k4ic.mongodb.net/yelp_camp", {
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
